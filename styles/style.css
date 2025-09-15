@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-color: rgb(209, 199, 199);
+}
+
+/* ...existing code... */
+.bg-home {
+  background-image: url('../assets/fundo-pizza.jpg');
+  background-size: cover;
+  background-position: center;
+}
+/* ...existing code... */
