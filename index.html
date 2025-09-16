@@ -5,6 +5,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <link rel="stylesheet" href="./styles/output.css" />
     <title>Pizza BD</title>
   </head>
@@ -18,25 +27,150 @@
           class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200"
         />
         <!-- Nome da pizzaria -->
-        <h1 class="text-4xl mt-4 mb-2 font-bold text-white">
-            Pizzaria BD
-        </h1>
-
+        <h1 class="text-4xl mt-4 mb-2 font-bold text-white">Pizzaria BD</h1>
 
         <!-- Span -->
         <span class="text-1xl text-white">
-            Rua das Flores, 123 - Centro - São Paulo
+          Rua das Flores, 123 - Centro - São Paulo
         </span>
 
-        <div class="bg-green-600 px-4 py-2 rounded-lg mt-5" id="horario-funcionamento">
-            <span class="text-white font-medium">
-                Seg á Dom: 18h às 23h
-            </span>
+        <div
+          class="bg-green-600 px-4 py-2 rounded-lg mt-5"
+          id="horario-funcionamento"
+        >
+          <span class="text-white font-medium"> Seg á Dom: 18h às 23h </span>
         </div>
-
-
       </div>
     </header>
     <!-- FIM HEADER -->
+
+    <!-- MENU -->
+    <h2 class="text-2xl md:text-3xl font-bold text-center mt-10 mb-7">
+      Conheça nosso menu
+    </h2>
+
+    <div id="menu">
+      <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+        
+        <!-- PRODUTO ITEM -->
+        <div class="flex gap-2">
+          <img
+            src="./assets/pizza-de-calabresa-1.jpg"
+            alt="Pizza de Calabresa 1"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200"
+          />
+
+          <div>
+            <p class="font-bold">Pizza de Calabresa</p>
+            <p class="text-sm">
+              Pizza de calabresa com queijo, cebola e orégano.
+            </p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 29,90</p>
+              <button 
+                class="bg-gray-900 px-5 rounded add-to-cart-bnt"
+                data-name="Pizza de Calabresa"
+                data-price="29.90"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+
+          </div>
+        </div>
+        <!-- FIM PRODUTO ITEM -->
+
+        <!-- PRODUTO ITEM 2-->
+        <div class="flex gap-2">
+          <img
+            src="./assets/mucarela-2.png"
+            alt="Pizza de Muçarela 2"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200"
+          />
+
+          <div>
+            <p class="font-bold">Pizza de Muçarela</p>
+            <p class="text-sm">
+              Pizza de muçarela com muito queijo e orégano.
+            </p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 24,90</p>
+              <button 
+                class="bg-gray-900 px-5 rounded add-to-cart-bnt"
+                data-name="Pizza de Muçarela"
+                data-price="24.90"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+
+          </div>
+        </div>
+        <!-- FIM PRODUTO ITEM 2-->
+
+        <!-- PRODUTO ITEM 3-->
+        <div class="flex gap-2">
+          <img
+            src="./assets/Pizza-Portuguesa-3.jpg"
+            alt="Pizza Portuguesa 3"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200"
+          />
+
+          <div>
+            <p class="font-bold">Pizza Portuguesa</p>
+            <p class="text-sm">
+              Pizza portuguesa com presunto, ovos, cebola e ervilha.
+            </p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 49,90</p>
+              <button 
+                class="bg-gray-900 px-5 rounded add-to-cart-bnt"
+                data-name="Pizza Portuguesa"
+                data-price="49.90"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+
+          </div>
+        </div>
+        <!-- FIM PRODUTO ITEM 3-->
+
+        <!-- PRODUTO ITEM 4-->
+        <div class="flex gap-2">
+          <img
+            src="./assets/Marguerita-4.jpg"
+            alt="Pizza Marguerita 4"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200"
+          />
+
+          <div>
+            <p class="font-bold">Pizza Marguerita</p>
+            <p class="text-sm">
+              Pizza marguerita com molho de tomate, queijo e manjericão.
+            </p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 32,90</p>
+              <button 
+                class="bg-gray-900 px-5 rounded add-to-cart-bnt"
+                data-name="Pizza Marguerita"
+                data-price="32.90"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+
+          </div>
+        </div>
+        <!-- FIM PRODUTO ITEM 4-->
+
+      </main>
+    </div>
+
+    <!-- FIM MENU -->
   </body>
 </html>
