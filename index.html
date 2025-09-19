@@ -1,10 +1,14 @@
-<!-- Sempre que fechar o arquivo, entrar no cmd na pasta "cardapio e rodar o "npm run dev" para carregar o TailWind-->
+<!-- Sempre que fechar o arquivo, entrar no cmd na pasta cardapio e rodar o "npm run dev" para carregar o TailWind-->
 <!-- Até agora pelo meu entendimento, toda a parte de design se caseia nas classes!-->
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet" />
 
     <link
       rel="stylesheet"
@@ -72,11 +76,11 @@
             <div class="flex items-center gap-2 justify-between mt-3">
               <p class="font-bold text-lg">R$ 29,90</p>
               <button 
-                class="bg-gray-900 px-5 rounded add-to-cart-bnt"
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
                 data-name="Pizza de Calabresa"
                 data-price="29.90"
               >
-                <i class="fa fa-cart-plus text-lg text-white"></i>
+                <i class="fa-solid fa-cart-plus text-lg text-white"></i>
               </button>
             </div>
 
@@ -101,11 +105,11 @@
             <div class="flex items-center gap-2 justify-between mt-3">
               <p class="font-bold text-lg">R$ 24,90</p>
               <button 
-                class="bg-gray-900 px-5 rounded add-to-cart-bnt"
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
                 data-name="Pizza de Muçarela"
                 data-price="24.90"
               >
-                <i class="fa fa-cart-plus text-lg text-white"></i>
+                <i class="fa-solid fa-cart-plus text-lg text-white"></i>
               </button>
             </div>
 
@@ -130,11 +134,11 @@
             <div class="flex items-center gap-2 justify-between mt-3">
               <p class="font-bold text-lg">R$ 49,90</p>
               <button 
-                class="bg-gray-900 px-5 rounded add-to-cart-bnt"
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
                 data-name="Pizza Portuguesa"
                 data-price="49.90"
               >
-                <i class="fa fa-cart-plus text-lg text-white"></i>
+                <i class="fa-solid fa-cart-plus text-lg text-white"></i>
               </button>
             </div>
 
@@ -159,11 +163,11 @@
             <div class="flex items-center gap-2 justify-between mt-3">
               <p class="font-bold text-lg">R$ 32,90</p>
               <button 
-                class="bg-gray-900 px-5 rounded add-to-cart-bnt"
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
                 data-name="Pizza Marguerita"
                 data-price="32.90"
               >
-                <i class="fa fa-cart-plus text-lg text-white"></i>
+                <i class="fa-solid fa-cart-plus text-lg text-white"></i>
               </button>
             </div>
 
@@ -188,11 +192,11 @@
             <div class="flex items-center gap-2 justify-between mt-3">
               <p class="font-bold text-lg">R$ 22,90</p>
               <button 
-                class="bg-gray-900 px-5 rounded add-to-cart-bnt"
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
                 data-name="Pizza de Frango com Catupiry"
                 data-price="22.90"
               >
-                <i class="fa fa-cart-plus text-lg text-white"></i>
+                <i class="fa-solid fa-cart-plus text-lg text-white"></i>
               </button>
             </div>
 
@@ -217,11 +221,11 @@
             <div class="flex items-center gap-2 justify-between mt-3">
               <p class="font-bold text-lg">R$ 47,90</p>
               <button 
-                class="bg-gray-900 px-5 rounded add-to-cart-bnt"
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
                 data-name="Pizza 4 Queijos"
                 data-price="47.90"
               >
-                <i class="fa fa-cart-plus text-lg text-white"></i>
+                <i class="fa-solid fa-cart-plus text-lg text-white"></i>
               </button>
             </div>
 
@@ -246,11 +250,11 @@
             <div class="flex items-center gap-2 justify-between mt-3">
               <p class="font-bold text-lg">R$ 38,90</p>
               <button 
-                class="bg-gray-900 px-5 rounded add-to-cart-bnt"
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
                 data-name="Pizza Napolitana"
                 data-price="38.90"
               >
-                <i class="fa fa-cart-plus text-lg text-white"></i>
+                <i class="fa-solid fa-cart-plus text-lg text-white"></i>
               </button>
             </div>
 
@@ -275,11 +279,11 @@
             <div class="flex items-center gap-2 justify-between mt-3">
               <p class="font-bold text-lg">R$ 24,90</p>
               <button 
-                class="bg-gray-900 px-5 rounded add-to-cart-bnt"
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
                 data-name="Pizza Brigadeiro"
                 data-price="24.90"
               >
-                <i class="fa fa-cart-plus text-lg text-white"></i>
+                <i class="fa-solid fa-cart-plus text-lg text-white"></i>
               </button>
             </div>
 
@@ -364,69 +368,62 @@
     </div>
     <!-- FIM MENU -->
 
-    <!-- MODAL CART -->
+    <!-- MODAL CARRINHO DE COMPRAS -->
 
-    <div class="bg-black/80 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden">
+    <div class="bg-black/70 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden">
 
       <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+        <h2 class="text-center font-bold text-2xl mb-2">Meu Carrinho</h2>
 
-        <h2 class="text-center font-bold text-2xl mb-2">
-          Meu Carrinho
-        </h2>
+        <div id="cart-items" class="flex justify-between mb-2 flex-col ">
 
-        <!-- ITEMS CART -->
-        <div id="cart-items" class="flex justify-between mb-2 flex-col">
-        <!-- FIM ITEMS CART -->
-        
-        <p class="text-right font-bold text-lg mt-5">
-          Total: <span id="cart-total">0,00</span>
-        </p>
+        </div>
 
-        <p class="font-bold mt-4">
-          Endereço de entrega:
-        </p>
+        <p class="font-bold">Total: <span id="cart-total">R$ 0,00</span></p>
 
+        <p class="font-bold mt-4">Endereço de entrega:</p>
         <input
           type="text"
-          placeholder="Digite seu endereço completo..."
+          placeholder="Digite seu endereço"
           id="address"
-          class="w-full border border-gray-300 rounded px-3 py-2 mt-4 mb-5"
+          class="w-full border border-gray-300 rounded px-3 py-2 mb-3"
         />
 
         <p class="text-red-500 hidden" id="address-warn">Digite seu endereço completo!</p>
 
-        <div class="flex items-center justify-between mt-4 w-full">
+        <div class="flex justify-between gap-2 mt-2">
 
-          <button id="close-cart-bnt" class="bg-gray-300 px-5 py-2 rounded mr-2">
+          <button
+            class="bg-gray-300 px-4 py-2 rounded hover:bg-gray-400"
+            id="close-modal-btn"
+          >
             Fechar
           </button>
-
-          <button id="checkout-bnt" class="bg-green-600 text-white px-5 py-2 rounded float-right mb-2">
-            Finalizar pedido
+          <button
+            class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
+            id="checkout-btn"
+          >
+            Finalizar Pedido
           </button>
-
-        </div>
 
       </div>
 
+      </div>
     </div>
+    <!-- FIM MODAL CARRINHO DE COMPRAS -->
 
-    <!-- FIM MODAL CART -->
-
-    <!-- button de adicionar ao carrinho -->
-
-    <footer class="w-full bg-red-600 py-2 fixed bottom-0 z-40 flex items-center justify-center">
+    <!--  BUTTON CART FOOTER -->
+    <footer class="w-full bg-red-600 py-3 fixed bottom-0 z-40 flex items-center justify-center">
       <button
-        class="flex items-center gap-2 text-white font-bold"
-        id="cart-bnt"
-      >   
-        (<span class="cart-count">0</span>)
-          Veja seu carrinho
-        <i class="fa fa-cart-plus text-lg text-white"></i>
+      class="flex items-center gap-2 text-white font-bold"
+      id="cart-btn"
+      >
+        <span id="cart-count">0</span>
+        Veja meu carrinho
+        <i class="fa fa-shopping-cart text-lg text-white"></i>
       </button>
     </footer>
-
-     <!-- FIM DO button de adicionar ao carrinho -->
+    <!-- FIM BUTTON CART FOOTER -->
 
   </body>
 </html>
