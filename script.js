@@ -8,6 +8,8 @@ const cartCount = document.getElementById('cart-count');
 const closeModalBtn = document.getElementById('close-modal-btn');
 const addressInput = document.getElementById('address');
 const addressWarn = document.getElementById('address-warn');
+const orderSuccess = document.getElementById('order-success');
+const cartTotalRow = document.getElementById('cart-total-row');
 
 let cart = [];
 
@@ -62,6 +64,12 @@ function addToCart(name, price) {
 
     updateCartModal();
 
+
+    // Efeito visual no contador do carrinho
+    cartCount.classList.add('cart-bounce');
+    setTimeout(() => {
+        cartCount.classList.remove('cart-bounce');
+    }, 400);
 }
 
 //atualizar o carrinho
@@ -95,3 +103,39 @@ function updateCartModal() {
         });
     });
 }
+
+//checkout
+checkoutBtn.addEventListener('click', function() {
+    const address = addressInput.value.trim();
+
+    if(address === "") {
+        addressWarn.style.display = "block";
+        return;
+    }
+
+    addressWarn.style.display = "none";
+
+    // Mostra mensagem de sucesso no modal
+    orderSuccess.innerText = `Pedido realizado com sucesso! Sua pizza será entregue em: ${address}`;
+    orderSuccess.style.display = "block";
+
+    // Oculta os botões e o total
+    checkoutBtn.style.display = "none";
+    closeModalBtn.style.display = "none";
+    cartTotal.style.display = "none";
+    document.getElementById('cart-total-row').style.display = "none";
+
+    cart = [];
+    updateCartModal();
+
+    setTimeout(() => {
+    orderSuccess.style.display = "none";
+    cartModal.style.display = "none";
+    // Mostra os botões e o total novamente
+    checkoutBtn.style.display = "inline-block";
+    closeModalBtn.style.display = "inline-block";
+    cartTotal.style.display = "block";
+    cartTotal.innerText = "";
+    document.getElementById('cart-total-row').style.display = "block";
+}, 5000);
+});
